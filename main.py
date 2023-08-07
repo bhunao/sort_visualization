@@ -47,10 +47,9 @@ def kinda_of_sort(lista: list):
     for i in range(lst_len):
         for j in range(i, lst_len):
             shiny_bar = j
+            play_bar()
             if pyxel.sin(lista[i]) > pyxel.sin(lista[j]):
                 lista[i], lista[j] = lista[j], lista[i]
-                print(lista[i], lista[j])
-                play_bar()
                 return
 
 
