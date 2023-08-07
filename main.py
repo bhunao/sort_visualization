@@ -70,7 +70,9 @@ def draw():
 def update():
     global shiny_bar, bars_size
     if bars_size == sorted_sizes:
-        pass
+        if pyxel.frame_count % 3 == 0:
+            shiny_bar = (shiny_bar + 1) % len(bars_size)
+            play_bar()
     elif pyxel.frame_count % 3 == 0:
         # shiny_bar = (shiny_bar + 1) % len(bars_size)
         kinda_of_sort(bars_size)
